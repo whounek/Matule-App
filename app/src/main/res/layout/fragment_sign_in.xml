@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <!-- Иконка руки и Заголовок -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👋 "
+            android:textSize="32sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать!"
+            android:textAppearance="@style/TextAppearance.Matule.Header" />
+    </LinearLayout>
+
+    <!-- Подзаголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Войдите, чтобы пользоваться функциями\nприложения"
+        android:textColor="@color/text_gray"
+        android:textSize="14sp" />
+
+    <!-- Поле "Вход по E-mail" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Вход по E-mail"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Используем наш созданный компонент поля ввода -->
+    <include
+        layout="@layout/component_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- Поле "Пароль" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Пароль"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <include
+        layout="@layout/component_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- Кнопка "Далее" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Далее"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/btn_primary_selector" />
+
+    <!-- Кнопка "Зарегистрироваться" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/primary_color"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Распорка, чтобы сдвинуть нижние элементы вниз экрана -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Или войдите с помощью -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Или войдите с помощью"
+        android:textColor="@color/text_gray"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <!-- Кнопка VK -->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="12dp"
+        android:text="Войти с VK"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/white"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_vk"
+        app:iconTint="@null"
+        app:iconGravity="textStart" />
+
+    <!-- Кнопка Yandex -->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="24dp"
+        android:text="Войти с Yandex"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/white"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="1dp"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_yandex"
+        app:iconTint="@null"
+        app:iconGravity="textStart" />
+
+</LinearLayout>
